@@ -47,7 +47,7 @@ var auth = require('easy-auth')({
   userPrompt  : 'Username: '
 , passPrompt  : 'Password: '
 , store       : null    // valid stores are: null, 'env', 'file'
-, storeName   : null    // defaults to script name ``process.argv[0]`` for env, and ``~/tmp/{process.argv[0]}.auth`` for file
+, storeName   : null    // defaults to script name ``process.argv[1]`` for env, and ``~/tmp/{process.argv[1]}.auth`` for file
 , storeFormat : '%u:%p' // user %u for username, and %p for pass
 , encrypt     : 'md5'   // valid values are: null (for plaintext), 'md5', 'base64'
 , skipUser    : false   // don't prompt for user, override storeFormat if you don't want blank username included

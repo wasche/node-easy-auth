@@ -1,0 +1,9 @@
+{
+  "author": "Wil Asche <wil@asche.us>",
+  "version": "0.1.0",
+  "dependencies": {
+    "underscore": "~1.5.2",
+    "async": "~0.2.9",
+    "read": "~1.0.5"
+  }
+}
