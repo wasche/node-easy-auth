@@ -1,4 +1,4 @@
-# Easy Authentication for Node Scripts
+# Easy Authentication for Node Scripts [![Build Status](https://travis-ci.org/wasche/node-easy-auth.png)](https://travis-ci.org/wasche/node-easy-auth) [![Still Maintained](http://stillmaintained.com/wasche/node-easy-auth.png)](http://stillmaintained.com/wasche/node-easy-auth) [![Dependency Status](https://gemnasium.com/wasche/node-easy-auth.png)](https://gemnasium.com/wasche/node-easy-auth)
 
 ## Installation
 
