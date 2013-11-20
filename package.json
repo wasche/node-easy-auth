@@ -1,4 +1,5 @@
 {
+  "name": "easy-auth"
   "author": "Wil Asche <wil@asche.us> (http://wil.asche.us)",
   "version": "0.1.0",
   "description": "easy authentication for command line applications",
