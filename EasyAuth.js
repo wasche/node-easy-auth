@@ -1,3 +1,4 @@
+/* globals modules */
 modules.export = (function(){
 
   var pkg = require('package.json')
@@ -6,13 +7,22 @@ modules.export = (function(){
     , _ = require('underscore')
     , async = require('async')
     , read = require('read')
+    , STORE_FORMAT = {
+        COLON   : '%u:%p'
+      , NEWLINE : '%u\n%p'
+      }
+    , ENCRYPT = {
+        PLAIN   : null
+      , MD5     : 'md5'
+      , BASE64  : 'base64'
+      }
     , DEFAULT_OPTIONS = {
         userPrompt  : 'Username: '
       , passPrompt  : 'Password: '
       , store       : null
       , storeName   : null
-      , storeFormat : mod.STORE_FORMAT.COLON
-      , encrypt     : mod.ENCRYPT.MD5
+      , storeFormat : STORE_FORMAT.COLON
+      , encrypt     : ENCRYPT.MD5
       , skipUser    : false
       , input       : process.stdin
       , output      : process.stdout
@@ -32,8 +42,8 @@ modules.export = (function(){
       , output  : this.options.output
       },
       function(err, user){
-        if (err) self.emit('error', err);
-        else self.user = user;
+        if (err) { self.emit('error', err); }
+        else { self.user = user; }
         callback();
       }
     );
@@ -47,8 +57,8 @@ modules.export = (function(){
       , input   : this.options.input
       , output  : this.options.output
       }, function(err, pass){
-        if (err) self.emit('error', err);
-        else self.pass = pass;
+        if (err) { self.emit('error', err); }
+        else { self.pass = pass; }
         callback();
       }
     );
@@ -56,11 +66,11 @@ modules.export = (function(){
 
   var EasyAuth = function(ops){
     this.options = _.extend({}, DEFAULT_OPTIONS, ops);
-    if (store && !storeName){
-      if (store === mod.STORE.ENV){
+    if (this.options.store && !this.options.storeName){
+      if (this.options.store === mod.STORE.ENV){
         this.options.storeName = process.argv[1];
       }
-      else if (store === mod.STORE.FILE){
+      else if (this.options.store === mod.STORE.FILE){
         this.options.storeName = '~/tmp/' + process.argv[1] + '.auth';
       }
     }
@@ -93,15 +103,8 @@ modules.export = (function(){
   , ENV   : 'env'
   , FILE  : 'file'
   };
-  mod.STORE_FORMAT = {
-    COLON   : '%u:%p'
-  , NEWLINE : '%u\n%p'
-  };
-  mod.ENCRYPT = {
-    PLAIN   : null
-  , MD5     : 'md5'
-  , BASE64  : 'base64'
-  };
+  mod.STORE_FORMAT = STORE_FORMAT;
+  mod.ENCRYPT = ENCRYPT;
 
   return mod;
 

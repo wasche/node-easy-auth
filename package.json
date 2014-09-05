@@ -1,7 +1,7 @@
 {
   "name": "easy-auth",
   "author": "Wil Asche <wil@asche.us> (http://wil.asche.us)",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "easy authentication for command line applications",
   "keywords": [
     "auth",
@@ -21,17 +21,18 @@
     "url": "http://github.com/wasche/node-easy-auth.git"
   },
   "engines": {
-    "node": ">=0.8"
+    "node": ">=0.10"
   },
   "dependencies": {
-    "underscore": "~1.5.2",
-    "async": "~0.2.9",
-    "read": "~1.0.5"
+    "async": "^0.2.10",
+    "read": "~1.0.5",
+    "underscore": "^1.5.2"
   },
   "scripts": {
     "test": "mocha"
   },
   "devDependencies": {
+    "assert": "^1.1.2",
     "mocha": "~1.14.0"
   }
 }

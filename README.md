@@ -1,4 +1,7 @@
-# Easy Authentication for Node Scripts [![Build Status](https://travis-ci.org/wasche/node-easy-auth.png)](https://travis-ci.org/wasche/node-easy-auth) [![Dependency Status](https://gemnasium.com/wasche/node-easy-auth.png)](https://gemnasium.com/wasche/node-easy-auth) [![Still Maintained](http://stillmaintained.com/wasche/node-easy-auth.png)](http://stillmaintained.com/wasche/node-easy-auth)
+# Easy Authentication for Node Scripts
+[![Build Status](https://travis-ci.org/wasche/node-easy-auth.png)](https://travis-ci.org/wasche/node-easy-auth)
+[![Dependency Status](https://gemnasium.com/wasche/node-easy-auth.png)](https://gemnasium.com/wasche/node-easy-auth)
+[![Still Maintained](http://stillmaintained.com/wasche/node-easy-auth.png)](http://stillmaintained.com/wasche/node-easy-auth)
 
 ## Installation
 
@@ -48,7 +51,7 @@ var auth = require('easy-auth')({
 , passPrompt  : 'Password: '
 , store       : null    // valid stores are: null, 'env', 'file'
 , storeName   : null    // defaults to script name ``process.argv[1]`` for env, and ``~/tmp/{process.argv[1]}.auth`` for file
-, storeFormat : '%u:%p' // user %u for username, and %p for pass
+, storeFormat : '%u:%p' // use %u for username, and %p for pass
 , encrypt     : 'md5'   // valid values are: null (for plaintext), 'md5', 'base64'
 , skipUser    : false   // don't prompt for user, override storeFormat if you don't want blank username included
 }
