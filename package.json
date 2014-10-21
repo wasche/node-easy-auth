@@ -1,7 +1,7 @@
 {
   "name": "easy-auth",
   "author": "Wil Asche <wil@asche.us> (http://wil.asche.us)",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "easy authentication for command line applications",
   "keywords": [
     "auth",
@@ -25,8 +25,7 @@
   },
   "dependencies": {
     "async": "^0.2.10",
-    "read": "~1.0.5",
-    "underscore": "^1.5.2"
+    "read": "~1.0.5"
   },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha"
